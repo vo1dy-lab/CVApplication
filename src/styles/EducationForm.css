@@ -1,9 +1,10 @@
 .educationForm {
   min-width: 500px;
   padding: 8px 16px;
-  border: 1px solid rgba(0, 0, 0, 0.342);
+  border: 1px solid rgb(201, 201, 201);
   border-radius: 8px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.186);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.186);
+  background-color: white;
 }
 
 .educationForm h2 {

@@ -8,8 +8,19 @@ main {
   padding: 16px 0;
 }
 
-main h2 {
-  font-size: 1.2rem;
-  font-weight: 400;
+.formHeader h2,
+.resumeHeader h2 {
+  font-size: 1.1rem;
+  font-weight: 300;
   margin-bottom: 16px;
+}
+
+.formHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resumeHeader {
+  width: 60%;
 }

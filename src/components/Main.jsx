@@ -9,6 +9,7 @@ import {
   validateExperienceForm,
   validateGeneralForm,
 } from "../utils/validation";
+import CV from "./CV";
 
 function Main() {
   const [formStep, setFormStep] = useState(1);
@@ -87,10 +88,13 @@ function Main() {
         setEducationFormErrors((prevErrors) => {
           const newErrors = [...prevErrors];
           if (!newErrors[index]) newErrors[index] = {};
-          newErrors[index][name] = errorsArray[index][name];
+          newErrors[index][name] = errorsArray[index]
+            ? errorsArray[index][name]
+            : null;
 
           return newErrors;
         });
+        break;
       }
 
       case 3: {
@@ -98,10 +102,13 @@ function Main() {
         setExperienceFormErrors((prevErrors) => {
           const newErrors = [...prevErrors];
           if (!newErrors[index]) newErrors[index] = {};
-          newErrors[index][name] = errorsArray[index][name];
+          newErrors[index][name] = errorsArray[index]
+            ? errorsArray[index][name]
+            : null;
 
           return newErrors;
         });
+        break;
       }
 
       default:
@@ -113,10 +120,25 @@ function Main() {
     <main>
       <Container>
         <div className="flex">
-          <h1>Create Your CV</h1>
-          <h2>
-            Fill out the sections below to generate your professional resume.
-          </h2>
+          {formStep < 4 && (
+            <div className="formHeader">
+              <h1>Create Your CV</h1>
+              <h2>
+                Fill out the sections below to generate your professional
+                resume.
+              </h2>
+            </div>
+          )}
+          {formStep === 4 && (
+            <div className="resumeHeader">
+              <h1>Resume Preview</h1>
+              <h2>
+                Your resume is ready. Review and download it in your preferred
+                format.
+              </h2>
+            </div>
+          )}
+
           {formStep === 1 && (
             <GeneralForm
               onNext={handleNext}
@@ -144,6 +166,14 @@ function Main() {
               onExperienceChange={setExperienceData}
               errors={experienceFormErrors}
               onBlur={handleBlur}
+            />
+          )}
+          {formStep === 4 && (
+            <CV
+              generalData={generalData}
+              educationData={educationData}
+              experienceData={experienceData}
+              onBack={handleBack}
             />
           )}
         </div>
