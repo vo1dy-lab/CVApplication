@@ -1,0 +1,80 @@
+.generalForm {
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  border-radius: 8px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.186);
+}
+
+.generalForm h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.fullName {
+  display: flex;
+  gap: 16px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.generalForm input {
+  font-family: Roboto, system-ui, Helvetica, Arial, sans-serif;
+  height: 32px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.556);
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.generalForm input:focus {
+  outline: 1px solid rgba(14, 128, 233, 0.901);
+}
+
+.generalForm label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.generalForm button {
+  font-family: Roboto, system-ui, Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  width: 96px;
+  border: 1px solid #2f81d2;
+  border-radius: 8px;
+  background-color: #2e8ce9;
+  margin-left: auto;
+  box-shadow: 0 0 3px #2b82d8;
+  cursor: pointer;
+}
+
+.generalForm button:hover {
+  background-color: #3093f6;
+}
+
+.generalForm button:active {
+  background-color: #2c84dc;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: 100;
+}
+
+input.inputError {
+  border-color: rgba(255, 0, 0, 0.6);
+  margin-bottom: 0;
+}
+
+input.inputError:focus {
+  outline: 1px solid rgba(255, 0, 0, 0.7);
+}

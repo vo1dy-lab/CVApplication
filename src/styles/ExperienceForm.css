@@ -1,0 +1,151 @@
+.experienceForm {
+  min-width: 500px;
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  border-radius: 8px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.186);
+}
+
+.experienceForm h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.experienceEntry {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.experienceEntry > .formContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.experienceForm > .formContainer.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 8px;
+}
+
+.experienceForm input {
+  font-family: Roboto, system-ui, Helvetica, Arial, sans-serif;
+  height: 32px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.556);
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.experienceForm input:focus {
+  outline: 1px solid rgba(14, 128, 233, 0.901);
+}
+
+.experienceForm label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.experienceForm textarea {
+  font-family: Roboto, system-ui, Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.556);
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.experienceForm textarea:focus {
+  outline: 1px solid rgba(14, 128, 233, 0.901);
+}
+
+.experienceForm button {
+  font-family: Roboto, system-ui, Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  width: 96px;
+  border: 1px solid #2f81d2;
+  border-radius: 8px;
+  background-color: #2e8ce9;
+  box-shadow: 0 0 3px #2b82d8;
+  cursor: pointer;
+}
+
+.experienceForm button:hover {
+  background-color: #3093f6;
+}
+
+.experienceForm button:active {
+  background-color: #2c84dc;
+}
+
+button.additionalAdd {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #2c84dc;
+  font-size: 0.9rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  width: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
+}
+
+button.additionalAdd:hover {
+  background: none;
+  color: #3093f6;
+}
+
+button.additionalAdd:active {
+  background: none;
+  color: #2875c2;
+}
+
+button.additionalRemove {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #df0101;
+  font-size: 0.9rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  width: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
+}
+
+button.additionalRemove:hover {
+  background: none;
+  color: #ff0000;
+}
+
+button.additionalRemove:active {
+  background: none;
+  color: #b60000;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: 100;
+}
+
+input.inputError {
+  border-color: rgba(255, 0, 0, 0.6);
+  margin-bottom: 0;
+}
+
+input.inputError:focus {
+  outline: 1px solid rgba(255, 0, 0, 0.7);
+}

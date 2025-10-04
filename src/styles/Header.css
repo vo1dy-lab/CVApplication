@@ -1,0 +1,21 @@
+header {
+  box-shadow: 0 0 12px black;
+  padding: 8px 0;
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo-header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.logo-icon {
+  height: 2em;
+  width: 2em;
+  color: rgb(0, 170, 255);
+}
